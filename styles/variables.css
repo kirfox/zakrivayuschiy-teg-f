@@ -6,4 +6,9 @@
     --main-font-text-weight: 400;
     --accent-color: #000000;
     --background-color: #FFFFFF;
+    --background-color-gradient-line:#d3d3d3;
+    --background-color-gradient-start:#e7e7e7;
+    --background-color-gradient-end: #1a1a1a;
+    --text-stroke-color: #FFFFFF;
+
   }
