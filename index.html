@@ -81,7 +81,11 @@
       </article>
     </main>
     <footer class="footer">
-      <button class="footer-btn">
+      <button 
+      type="button"
+      onclick="window['dialog-id'].showModal();"
+      aria-controls="dialog-id"
+      class="footer-btn">
         <svg width="21" height="21" class="footer_img">
           <use href="./svg/floppy1.svg#floppy-1"  class="floppy">
         </svg>
@@ -89,17 +93,19 @@
       </button>
     </footer>
 
-    <dialog class="dialog" open>
-      <div class="dialog_container">
-        <svg width="21" height="21" class="dialog_img">
-          <use href="./svg/floppy1.svg#floppy-1"  class="dialog">
+    <dialog class="dialog" id="dialog-id">
+      <!-- <div class="dialog_container"> -->
+        <svg class="dialog_img">
+          <use href="./svg/floppy2.svg#floppy-2" >
         </svg>
         <span class="dialog_text">
           Вставьте дискету, чтобы продолжить
         </span>
-      </div>
+      <!-- </div> -->
       
-      <button class="dialog_btn" type="submit">Ок</button>
+      <button class="dialog_btn"type="button" 
+      onclick="window['dialog-id'].close()"
+      > <span class="button__text">Ок</span></button>
     </dialog>
 
     <script src="./scripts/like.js"></script>

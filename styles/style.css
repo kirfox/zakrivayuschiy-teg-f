@@ -283,15 +283,15 @@
   height: 40px; */
 }
 
-.main__card-button:focus, .footer-btn:focus {
+.main__card-button:focus, .footer-btn:focus, .dialog_btn:focus {
   outline: none;
 }
 
-.main__card-button:focus-visible, .footer-btn:focus-visible {
+.main__card-button:focus-visible, .footer-btn:focus-visible, .dialog_btn:focus-visible {
   box-shadow: 2px 2px var(--accent-color);
 }
 
-.main__card-button::before, .footer-btn::before {
+.main__card-button::before, .footer-btn::before, .dialog_btn::before {
   content: '';
   background: var(--accent-color);
   transition: 0.5s ease-in-out;
@@ -302,32 +302,78 @@
   transform-origin: left;
 }
 
-.main__card-button:hover::before, .footer-btn:hover::before {
+.main__card-button:hover::before, .footer-btn:hover::before, .dialog_btn:hover::before {
   transform: scaleX(1);
 }
 
-dialog {
+.dialog {
+  
+}
+
+.dialog[open] {
   background: var(--background-color);
   inline-size: 357px;
   block-size: 193px;
-  border: 2px solid #000;
+  border: 2px solid var(--accent-color);
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 30% 70%;
+  /* grid-template-rows: 1fr 1fr; */
+  align-items: center;
+  justify-content: center;
+  transition: opacity 15.3s ease-in-out;
+
 }
 
 .dialog_container {
-  display: flex;
+  
+
 }
 
-.dialog_text {
+.dialog_img {
+  width: 39px;
+  height: 39px;
+  justify-self: center;
+  color: var(--accent-color);
+}
+
+/* .floppy_dialog{
+  width: 39px;
+  height: 39px;
+  transform: scale(1.8);
+}  */
+
+.dialog_text,.dialog_btn {
   color: var(--accent-color);
   font-size: 14px;
   font-weight: var(--main-font-text-weight);
   font-family: 'PressStart2P', sans-serif;
   line-height: 21px;
+  text-transform: uppercase;
 }
 
 .dialog_btn {
-
+  /* display: block; */
+  text-transform: uppercase;
+  grid-column: span 2;
+  /* inline-size: 293px; */
+  block-size: 38px;
+  background-color: transparent;
+  font-size: 14px;
+  border: 2px solid var(--accent-color);
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease;
+  background-color: var(--background-color);
+  
 }
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.7);
+} 
 
 @media (width <= 375px) {
   .header {
@@ -349,6 +395,5 @@ dialog {
 
   .footer-btn {
     block-size: 84px;
-    
   }
 }
