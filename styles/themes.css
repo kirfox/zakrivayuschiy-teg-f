@@ -5,52 +5,52 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-:root.theme-light{
-    --main-font: "Inter-Variable";
-    --accent-font: 'PressStart2P';
-    --main-font-title-weight: 700;
-    --main-font-text-weight: 400;
-    --accent-color: #000000;
-    --background-color: #FFFFFF;
-    --background-color-gradient-line:#d3d3d3;
-    --background-color-gradient-start:#e7e7e7;
-    --background-color-gradient-end: #1a1a1a;
-    --text-stroke-color: #FFFFFF;
-    --button-text-color: #FFFFFF;
-    --contour-heart-color: #000000;
-    --sparks-heart-color: #FF0000;
+:root.theme-light {
+  --main-font: "Inter-Variable";
+  --accent-font: "PressStart2P";
+  --main-font-title-weight: 700;
+  --main-font-text-weight: 400;
+  --accent-color: #000000;
+  --background-color: #ffffff;
+  --background-color-gradient-line: #d3d3d3;
+  --background-color-gradient-start: #e7e7e7;
+  --background-color-gradient-end: #1a1a1a;
+  --text-stroke-color: #ffffff;
+  --button-text-color: #ffffff;
+  --contour-heart-color: #000000;
+  --sparks-heart-color: #ff0000;
 }
 
 :root.theme-dark {
-    --main-font: "Inter-Variable";
-    --accent-font: 'PressStart2P';
-    --main-font-title-weight: 785;
-    --main-font-text-weight: 465;
-    --accent-color: #00CC14;
-    --background-color: #000000;
-    --background-color-gradient-line:#000000;
-    --background-color-gradient-start:#007f0c;
-    --background-color-gradient-end: #004306;
-    --text-stroke-color: #000000;
-    --button-text-color: #00CC14;
-    --contour-heart-color: #00CC14;
-    --sparks-heart-color: #FF0000;
+  --main-font: "Inter-Variable";
+  --accent-font: "PressStart2P";
+  --main-font-title-weight: 785;
+  --main-font-text-weight: 465;
+  --accent-color: #00cc14;
+  --background-color: #000000;
+  --background-color-gradient-line: #000000;
+  --background-color-gradient-start: #007f0c;
+  --background-color-gradient-end: #004306;
+  --text-stroke-color: #000000;
+  --button-text-color: #00cc14;
+  --contour-heart-color: #00cc14;
+  --sparks-heart-color: #ff0000;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --main-font: "Inter-Variable";
-        --accent-font: 'PressStart2P';
-        --main-font-title-weight: 785;
-        --main-font-text-weight: 465;
-        --accent-color: #00CC14;
-        --background-color: #000000;
-        --background-color-gradient-line:#000000;
-        --background-color-gradient-start:#007f0c;
-        --background-color-gradient-end: #004306;
-        --text-stroke-color: #000000;
-        --button-text-color: #00CC14;
-        --contour-heart-color: #00CC14;
-        --sparks-heart-color: #FF0000;
-    }
+  :root {
+    --main-font: "Inter-Variable";
+    --accent-font: "PressStart2P";
+    --main-font-title-weight: 785;
+    --main-font-text-weight: 465;
+    --accent-color: #00cc14;
+    --background-color: #000000;
+    --background-color-gradient-line: #000000;
+    --background-color-gradient-start: #007f0c;
+    --background-color-gradient-end: #004306;
+    --text-stroke-color: #000000;
+    --button-text-color: #00cc14;
+    --contour-heart-color: #00cc14;
+    --sparks-heart-color: #ff0000;
+  }
 }
