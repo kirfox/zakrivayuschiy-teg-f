@@ -24,13 +24,13 @@
   color: var(--accent-color);
   background-image: repeating-linear-gradient(
       180deg,
-      var(--background-color-gradient-line),
-      transparent 2px
+      var(--background-color-gradient-line) 0 2px,
+      transparent 2px 4px
     ),
     repeating-linear-gradient(
       90deg,
-      var(--background-color-gradient-line),
-      transparent 2px
+      var(--background-color-gradient-line) 4px 6px,
+      transparent 6px 8px
     ),
     linear-gradient(
       180deg,
@@ -48,7 +48,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
   margin-block-start: 100px;
   block-size: 368px;
@@ -201,7 +201,7 @@
 .main__card-label {
   position: absolute;
   font-size: 14px;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   font-weight: var(--main-font-text-weight);
   background-blend-mode: hard-light;
   right: 25px;
@@ -211,10 +211,12 @@
   z-index: 1;
 }
 
-@supports (-webkit-text-stroke: 1px var(--text-stroke-color)) {
+@supports (-webkit-text-stroke: 1px var(--text-stroke-color)) or
+  (text-stroke: 1px var(--text-stroke-color)) {
   .main__card-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-stroke-color);
+    text-stroke: 1px var(--text-stroke-color);
   }
 }
 
@@ -245,7 +247,7 @@
   border: 2px solid var(--accent-color);
   font-weight: var(--main-font-text-weight);
   font-size: 14px;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   background-color: transparent;
   inline-size: 130px;
   block-size: 38px;
@@ -270,13 +272,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   inline-size: clamp(19.063rem, 18.527rem + 2.679vi, 20.938rem);
   block-size: 55px;
   border: 2px solid var(--accent-color);
   font-size: 14px;
   font-weight: var(--main-font-text-weight);
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   transition: 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -349,7 +350,7 @@
   color: var(--accent-color);
   font-size: 14px;
   font-weight: var(--main-font-text-weight);
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   line-height: 21px;
   text-transform: uppercase;
 }
@@ -396,5 +397,7 @@
 
   .main__footer-btn {
     block-size: 84px;
+    flex-direction: column;
+    gap: 8px;
   }
 }
